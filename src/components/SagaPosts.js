@@ -30,11 +30,13 @@ class SagaPosts extends React.Component {
 }
 SagaPosts.defalutProps = {
   loading: true,
-  error: false
+  error: false,
+  articles : []
 };
 function mapStateToProps(state) {
+  let stateobj= state.reducerObj;
   return {
-    articles: state.remoteArticles
+    articles: stateobj.remoteArticles
   };
 }
 const mapDispatchToProps = {
